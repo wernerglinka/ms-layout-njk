@@ -1,13 +1,11 @@
-#!/usr/bin/env node
-
 /*
  * Metalsmith build file
- * Build site with `node ./build.js` or `npm start`
+ * Build site with 'node build'
  */
 
 'use strict';
 
-const consoleLog = true; 
+const consoleLog = true;
 const inplace = require('metalsmith-in-place');
 const layouts = require('metalsmith-layouts');
 const metalsmith = require('metalsmith');
@@ -20,25 +18,25 @@ nunjucks
     .addFilter("spaceToDash", function (string) {
         "use strict";
         return string.replace(/\s+/g, "-");
-	})
-	.addFilter("toUpper", function (string) {
+    })
+    .addFilter("toUpper", function (string) {
         "use strict";
         return string.toUpperCase();
-    })
+    });
 
 const templateConfig = {
-		"engine": "nunjucks",
-		"directory": "./layouts",
-		"partials": "./layouts/partials"
-	};
+    "engine": "nunjucks",
+    "directory": "./layouts",
+    "partials": "./layouts/partials"
+};
 
 metalsmith(__dirname)
-	.clean(true)
-	.source('./src/')
-	.destination('./build/')
-	.use(inplace(templateConfig))
-	.use(layouts(templateConfig))
-	.build(function(err) {
-	if (err) throw err;
-		console.log('Build finished!');
-	});
+    .clean(true)
+    .source('./src/')
+    .destination('./build/')
+    .use(inplace(templateConfig))
+    .use(layouts(templateConfig))
+    .build(function(err) {
+    if (err) throw err;
+        console.log('Build finished!');
+    });
