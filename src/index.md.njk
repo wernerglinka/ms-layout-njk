@@ -8,8 +8,10 @@ footer_text: Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit
 filter_test: I should have dashes between words
 ---
 
-<h2>This is the Content</h2>
+## This is the Content
 
-<p>This version uses metalsmith-layouts 2.1.0 and metalsmith-in-place 4.1.1</p>
-<p>{{ filter_test | spaceToDash }}</p>
-<p><em>{{ footnote | toUpper }}</em></p>
+This version uses metalsmith-layouts 2.1.0 and metalsmith-in-place 4.1.1
+
+{{ filter_test | spaceToDash }}
+
+_{{ footnote | toUpper }}_

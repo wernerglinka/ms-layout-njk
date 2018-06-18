@@ -10,6 +10,7 @@
   "author": "ItsMeBender",
   "license": "MIT",
   "dependencies": {
+    "jstransformer-markdown": "^1.2.1",
     "jstransformer-nunjucks": "^0.5.0",
     "metalsmith": "^2.3.0",
     "metalsmith-in-place": "^4.1.1",
