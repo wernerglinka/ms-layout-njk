@@ -1,3 +1,5 @@
+/*jslint es6*/
+
 /*
  * Metalsmith build file
  * Build site with 'node build'
@@ -36,7 +38,9 @@ metalsmith(__dirname)
     .destination('./build/')
     .use(inplace(templateConfig))
     .use(layouts(templateConfig))
-    .build(function(err) {
-    if (err) throw err;
+    .build(function (err) {
+        if (err) {
+            throw err;
+        }
         console.log('Build finished!');
     });
