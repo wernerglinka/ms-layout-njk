@@ -7,16 +7,6 @@
 
 'use strict';
 
-const toUpper = function (string) {
-	"use strict";
-	return string.toUpperCase();
-};
-
-const spaceToDash = function (string) {
-	"use strict";
-	return string.replace(/\s+/g, "-");
-};
-
 const consoleLog = true; 
 const inplace = require('metalsmith-in-place');
 const layouts = require('metalsmith-layouts');
