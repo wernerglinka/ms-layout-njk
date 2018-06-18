@@ -4,4 +4,7 @@ When you build static websites with Metalsmith it is very likely that you use th
 
 I encountered an additional difficulty as I am using Nunjucks as the templating engine and I needed access to the Nunjucks environment to extend Nunjucks with custom filters. 
 
-To understand the differences I built this repo. The **master branch** is build with the latest plugin versions, metalsmith-layouts  2.1.0  and metalsmith-in-place 4.1.1, while the **obsolete branch** used metalsmith-layouts 1.6.5 and metalsmith-in-place 1.4.4 plus Nunjucks.
+To understand the differences I built this repo. 
+
+The **master branch** is build with the latest plugin versions, metalsmith-layouts  2.1.0  and metalsmith-in-place 4.1.1, while the **obsolete branch** used metalsmith-layouts 1.6.5 and metalsmith-in-place 1.4.4 plus Nunjucks.
+The third branch, **with_markdown** uses a markdown source file.
