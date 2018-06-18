@@ -1,0 +1,15 @@
+---
+title: Hello Title ;-)
+layout: body.njk
+
+footnote: this is a footnote
+header_text: Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo.
+footer_text: Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.
+filter_test: I should have dashes between words
+---
+
+<h2>This is the Content</h2>
+
+<p>Cras mattis consectetur purus sit amet fermentum. <strong>Nulla vitae elit</strong> libero, a pharetra augue.</p>
+<p>{{ filter_test | spaceToDash }}</p>
+<p><em>{{ footnote | toUpper }}</em></p>

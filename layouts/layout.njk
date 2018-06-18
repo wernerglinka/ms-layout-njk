@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% include "partials/header.njk" %}
+
+    {% block body %}   
+      This is the default contents
+    {% endblock %}
+
+    {% include "partials/footer.njk" %}
+  </body>
+</html>
