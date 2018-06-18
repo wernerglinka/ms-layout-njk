@@ -4,12 +4,12 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    {% include "partials/header.njk" %}
+    {% include "partials/header.html" %}
 
     {% block body %}   
       This is the default contents
     {% endblock %}
 
-    {% include "partials/footer.njk" %}
+    {% include "partials/footer.html" %}
   </body>
 </html>

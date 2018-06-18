@@ -21,14 +21,25 @@ const consoleLog = true;
 const inplace = require('metalsmith-in-place');
 const layouts = require('metalsmith-layouts');
 const metalsmith = require('metalsmith');
+const nunjucks = require("nunjucks");
+
+
+nunjucks
+    .configure(["./layouts", "./layouts/partials"], {watch: false, autoescape: false})
+
+    .addFilter("spaceToDash", function (string) {
+        "use strict";
+        return string.replace(/\s+/g, "-");
+	})
+	.addFilter("toUpper", function (string) {
+        "use strict";
+        return string.toUpperCase();
+    })
 
 const templateConfig = {
-		engineOptions: {
-			filters: {
-				toUpper: toUpper,
-				spaceToDash: spaceToDash
-			}
-		}
+		"engine": "nunjucks",
+		"directory": "./layouts",
+		"partials": "./layouts/partials"
 	};
 
 metalsmith(__dirname)
