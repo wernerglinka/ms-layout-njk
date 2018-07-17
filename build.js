@@ -16,7 +16,6 @@ const spaceToDash = function (string) {
 };
 
 const inplace = require('metalsmith-in-place');
-const layouts = require('metalsmith-layouts');
 const metalsmith = require('metalsmith');
 
 const templateConfig = {
@@ -33,7 +32,6 @@ metalsmith(__dirname)
     .source('./src/')
     .destination('./build/')
     .use(inplace(templateConfig))
-    .use(layouts(templateConfig))
     .build(function (err) {
         if (err) {
             throw err;
